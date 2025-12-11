@@ -3,6 +3,7 @@
 Проект предназначен для запуска сервера загрузки изображений с использованием Docker, PostgreSQL и PgBouncer.
 
 ## Структура проекта
+```
 .
 ├── services
 │ ├── backend # Python-сервис для загрузки изображений
@@ -14,7 +15,7 @@
 ├── docker-compose.yml
 ├── .env.sample
 └── requirements.txt
-
+```
 
 ## Запуск проекта
 
