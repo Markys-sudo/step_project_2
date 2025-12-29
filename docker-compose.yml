@@ -8,8 +8,9 @@ services:
     container_name: upload-server
     command: [ "python", "run.py" ]
     env_file:
-      - ./services/backend/.env
-      - ./services/pgbouncer/.env
+#      - ./services/backend/.env
+#      - ./services/pgbouncer/.env
+      - ./.env
       # - services/backend/.env
       # - ./services/pgbouncer/.env
     environment:
@@ -53,7 +54,8 @@ services:
     restart: unless-stopped
     container_name: postgres-upload-server
     env_file:
-      - services/backend/.env
+#      - services/backend/.env
+      - ./.env
     ports:
       - "5432:5432"
     volumes:
@@ -75,8 +77,9 @@ services:
     container_name: pgbouncer-upload-server
     restart: always
     env_file:
-      - ./services/backend/.env
-      - ./services/pgbouncer/.env
+#      - ./services/backend/.env
+#      - ./services/pgbouncer/.env
+      - ./.env
     ports:
       - "6432:6432"
     volumes:
